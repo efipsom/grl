@@ -105,6 +105,7 @@ basis_project (
   DEPENDS
     FlatBuffers # google flatbuffers https://github.com/google/flatbuffers
     Boost{program_options,filesystem,unit_test_framework,system,regex,coroutine,chrono}
+    ROS                # Robot Operating System http://ROS.org
     #<dependency>
   OPTIONAL_DEPENDS
     #<optional-dependency>

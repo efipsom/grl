@@ -11,7 +11,7 @@
 # If ROSDEPS is set, then it will add these dependencies to ROS_LIBRARIES
 #
 
-
+message("finding ROS")
 SET(AVAILABLE_ROS_VERSIONS "jade;indigo;hydro;groovy;kinetic")
 
 IF(ROSDEPS)
