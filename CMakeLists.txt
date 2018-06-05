@@ -95,5 +95,6 @@ if (DEFINED BASIS_INSTALL_PREFIX_CONFIGURED AND NOT BASIS_INSTALL_PREFIX_CONFIGU
                          " and then re-configure this project to use this installation.")
   endif ()
 endif ()
+add_subdirectory(test)
 
 

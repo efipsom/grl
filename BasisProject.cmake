@@ -106,15 +106,14 @@ basis_project (
     FlatBuffers # google flatbuffers https://github.com/google/flatbuffers
     Boost{program_options,filesystem,unit_test_framework,system,regex,coroutine,chrono}
     ROS                # Robot Operating System http://ROS.org
+    Eigen3             # Linear Algebra eigen.tuxfamily.com
+    Threads            # pthreads, see CMake documentation
     #<dependency>
   OPTIONAL_DEPENDS
     #<optional-dependency>
-    Threads            # pthreads, see CMake documentation
-    Eigen3             # Linear Algebra eigen.tuxfamily.com
     Nanopb             # Used in Kuka Fast Robot Interface for serializing and deserializing protobufs
     Ceres              # http://ceres-solver.org/ used in arm hand eye calibration
     #CAMODOCAL         # used for hand eye calibration plugin, files included directly https://github.com/hengli/camodocal
-    ROS                # Robot Operating System http://ROS.org
     TRTK               # Transform Registration Toolkit, for pivot calibration https://github.com/RWTHmediTEC/TRTK
     SpaceVecAlg        # Implementation of Roy Featherstone's Spatial Vector Algebra https://github.com/jrl-umi3218/SpaceVecAlg
     sch-core           # Algorithms for convex hulls https://github.com/jrl-umi3218/sch-core used for inverse kinematics

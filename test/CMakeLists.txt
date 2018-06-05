@@ -77,19 +77,18 @@ endif ()
 
 # For KUKA IIWA FRI Libraries
 if(TARGET KukaFRIClient OR FRI_Client_SDK_Cpp_FOUND)
-
     basis_include_directories(${FRI_Client_SDK_Cpp_PROJECT_INCLUDE_DIRS} ${Boost_REGEX_LIBRARY} ${FRI_Client_SDK_Cpp_INCLUDE_DIRS} ${PROJECT_INCLUDE_DIR}/thirdparty/vrep/include)
 
 	basis_add_executable(KukaFRITest.cpp)# ${GRL_FLATBUFFERS_OUTPUTS})
-	basis_target_link_libraries(KukaFRITest ${Boost_LIBRARIES} ${Boost_REGEX_LIBRARY} ${FRI_Client_SDK_Cpp_LIBRARIES}  ${Nanopb_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} KukaFRIClient)
+	basis_target_link_libraries(KukaFRITest ${Boost_LIBRARIES} ${Boost_REGEX_LIBRARY} ${FRI_Client_SDK_Cpp_LIBRARIES}  ${Nanopb_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} KukaFRIClient pthread)
 
     if(UNIX AND NOT APPLE)
       set(LINUX_ONLY_LIBS ${LIBDL_LIBRARIES})
     endif()
 
-    basis_add_test(KukaLBRiiwaVrepPluginTest.cpp)
-	basis_target_link_libraries(KukaLBRiiwaVrepPluginTest ${Boost_LIBRARIES} ${Boost_REGEX_LIBRARY} ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY} ${FRI_Client_SDK_Cpp_LIBRARIES}  ${Nanopb_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT}
-                    v_repLib KukaFRIClient ${LINUX_ONLY_LIBS} )
+    #basis_add_test(KukaLBRiiwaVrepPluginTest.cpp)
+	#basis_target_link_libraries(KukaLBRiiwaVrepPluginTest ${Boost_LIBRARIES} ${Boost_REGEX_LIBRARY} ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY} ${FRI_Client_SDK_Cpp_LIBRARIES}  ${Nanopb_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT}
+                   # v_repLib KukaFRIClient ${LINUX_ONLY_LIBS} )
 endif()
 
 
